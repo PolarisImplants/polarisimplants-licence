@@ -1,2 +1,1 @@
 # polarisimplants-licence
-polarisimplants-licence
