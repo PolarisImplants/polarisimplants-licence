@@ -1,242 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>PolarisImplants – Espace licences & CNC</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>PolarisImplants – Espace licences & CNC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
+  <style>
     body {
-        margin: 0;
-        font-family: system-ui, Arial, sans-serif;
-        background: #0f172a;
-        color: #e5e7eb;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
     }
 
     header {
-        padding: 16px 24px;
-        background: #020617;
-        border-bottom: 1px solid #1f2937;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 12px;
+      padding: 16px 24px;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .logo-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .logo-title img {
-        height: 40px;
-        width: auto;
-        object-fit: contain;
-        border-radius: 6px;
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
+      background: #0f172a;
+      object-fit: contain;
     }
 
     .logo-title h1 {
-        margin: 0;
-        font-size: 1.1rem;
+      margin: 0;
+      font-size: 1.1rem;
     }
 
     .subtitle {
-        font-size: 0.85rem;
-        color: #9ca3af;
-        margin: 0;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin: 0;
     }
 
     main {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 24px 16px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* 🔵 TEXTE PLUS GRAND ET PLUS VISIBLE */
+    .hero p {
+      margin: 6px 0;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-align: center;
     }
 
     .hero h2 {
-        margin: 0 0 10px;
-        font-size: 1.4rem;
-    }
-
-    .hero p {
-        color: #cbd5f5;
-        font-size: 1rem;
-        margin-top: 8px;
-        line-height: 1.4;
-        text-align: center;
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
     }
 
     .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 16px;
-        margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
 
     .card {
-        background: #020617;
-        border-radius: 12px;
-        border: 1px solid #1f2937;
-        padding: 18px;
+      background: #020617;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .card h3 {
-        margin: 0 0 6px;
-        font-size: 1.05rem;
-        font-weight: 600;
-    }
-
-    .card p {
-        font-size: 0.9rem;
-        color: #9ca3af;
-        margin: 0;
+      margin: 0;
+      font-size: 1.1rem;
+      color: #e5e7eb;
     }
 
     .steps {
-        margin-top: 8px;
-        padding-left: 18px;
-        color: #cbd5f5;
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      margin: 4px 0 0;
+      padding-left: 18px;
+    }
+
+    .btn-row {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center; /* 🔵 CENTRE LE BOUTON */
     }
 
     .btn {
-        display: block;
-        width: 100%;
-        margin-top: 12px;
-        background: #1d4ed8;
-        border: 1px solid #1d4ed8;
-        padding: 10px;
-        text-align: center;
-        border-radius: 999px;
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        transition: 0.15s;
-    }
-
-    .btn:hover {
-        background: #2563eb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; /* 🔵 CENTRE LE TEXTE DANS LE BOUTON */
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #1d4ed8;
+      background: #1d4ed8;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+      text-align: center;
+      width: 100%;
+      max-width: 280px; /* 🔵 Largeur idéale */
     }
 
     footer {
-        margin-top: 40px;
-        text-align: center;
-        font-size: 0.85rem;
-        color: #6b7280;
-        padding: 16px;
-        border-top: 1px solid #1f2937;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+      padding: 16px;
+      border-top: 1px solid #1f2937;
+      margin-top: 16px;
     }
-
-    /* FORMULAIRE */
-    .form-box {
-        background: white;
-        color: black;
-        padding: 22px;
-        border-radius: 10px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        margin-top: 12px;
-    }
-
-    .form-box label {
-        font-weight: bold;
-        margin-top: 10px;
-        display: block;
-    }
-
-    .form-box input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 6px;
-        border: 1px solid #999;
-    }
-
-    .form-box button {
-        width: 100%;
-        padding: 12px;
-        background: #003366;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        margin-top: 16px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .form-box button:hover {
-        background: #0050aa;
-    }
-
-    #response {
-        margin-top: 12px;
-        font-weight: bold;
-    }
-</style>
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="logo-title">
-    <img src="logo.png" alt="logo" onerror="this.style.display='none'">
+    <img src="logo.png" alt="PolarisImplants Logo" onerror="this.style.display='none'">
     <div>
       <h1>PolarisImplants – Espace licences</h1>
-      <p class="subtitle">Activation du guide & module CNC</p>
+      <p class="subtitle">Activation du guide PolarisImplants & module CNC PolarisVision</p>
     </div>
+  </div>
+
+  <div class="tag">
+    <span>Compatible machine CNC</span>
   </div>
 </header>
 
 <main>
+  <section class="hero">
+    <h2>Merci pour votre achat !</h2>
 
-<section class="hero">
-    <h2 style="text-align:center;">Merci pour votre achat !</h2>
-    <p><b>Vous trouverez ci-dessous :</b><br>
-        – le générateur de licence PolarisImplants<br>
-        – le module CNC PolarisVision pour le G-code
-    </p>
-</section>
+    <p>Vous trouverez ci-dessous :</p>
+    <p>• l’accès au <b>générateur de licence PolarisImplants</b></p>
+    <p>• le lien vers <b>PolarisVision – CNC Drilling Module</b></p>
+  </section>
 
-<section class="cards">
+  <section class="cards">
 
-    <!-- LICENCE -->
+    <!-- CARTE 1 -->
     <article class="card">
-        <h3>1. Générer votre licence PolarisImplants</h3>
-        <p>Veuillez renseigner vos informations ci-dessous :</p>
-
-        <div class="form-box">
-            <label>Nom :</label>
-            <input id="nom" type="text">
-
-            <label>Prénom :</label>
-            <input id="prenom" type="text">
-
-            <label>Email :</label>
-            <input id="email" type="email">
-
-            <button onclick="envoyer()">Obtenir ma licence</button>
-            <div id="response"></div>
-        </div>
+      <h3>1. Générer votre licence PolarisImplants</h3>
+      <ul class="steps">
+        <li>Cliquer sur le bouton ci-dessous.</li>
+        <li>Indiquez nom, prénom, e-mail.</li>
+        <li>Recevez votre licence par e-mail.</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn" href="https://leguidechirurgical.com" target="_blank">Accéder au générateur de licences</a>
+      </div>
     </article>
 
-    <!-- CNC -->
+    <!-- CARTE 2 -->
     <article class="card">
-        <h3>2. PolarisVision – CNC Drilling Module</h3>
-        <p>Calibrer la plaque, mesurer vos points et générer votre G-code machine CNC.</p>
-
-        <ul class="steps">
-            <li>Charger l’image Polaris</li>
-            <li>Définir les 4 coins du rectangle rouge</li>
-            <li>Mesurer et générer PDF/G-code</li>
-        </ul>
-
+      <h3>2. PolarisVision – CNC Drilling Module</h3>
+      <ul class="steps">
+        <li>Charger l’image Polaris.</li>
+        <li>Calibrer le cadre (4 points).</li>
+        <li>Mesurer vos points et générer PDF / G-code.</li>
+      </ul>
+      <div class="btn-row">
         <a class="btn" href="https://polarisimplants.github.io/polarisvision/" target="_blank">
-            Ouvrir PolarisVision – CNC Drilling Module
+          Ouvrir PolarisVision – CNC Drilling Module
         </a>
+      </div>
     </article>
 
-</section>
-
+  </section>
 </main>
 
 <footer>
@@ -244,25 +199,10 @@
 </footer>
 
 <script>
-function envoyer() {
-    const nom = nom.value.trim();
-    const prenom = prenom.value.trim();
-    const email = email.value.trim();
-
-    const resp = document.getElementById("response");
-
-    if (!nom || !prenom || !email) {
-        resp.style.color = "red";
-        resp.innerText = "Veuillez remplir tous les champs.";
-        return;
-    }
-
-    resp.style.color = "green";
-    resp.innerText = "Merci ! Votre licence vous sera envoyée par email.";
-}
-
-document.getElementById("year").innerText = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
+
