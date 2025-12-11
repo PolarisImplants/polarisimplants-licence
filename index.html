@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,224 +8,174 @@
   <style>
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
     }
+
     header {
       padding: 16px 24px;
       background: #020617;
       border-bottom: 1px solid #1f2937;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .logo-title {
-      display: flex;
       align-items: center;
-      gap: 10px;
     }
-    .logo-title img {
-      height: 40px;
-      width: auto;
-      border-radius: 6px;
-      object-fit: contain;
-    }
-    .logo-title h1 {
+
+    header h1 {
       margin: 0;
       font-size: 1.2rem;
     }
-    .subtitle {
-      font-size: 0.85rem;
-      color: #9ca3af;
-      margin: 0;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-    .hero {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .hero h2 {
-      margin-bottom: 8px;
-      font-size: 1.8rem;
-    }
-    .hero p {
-      margin: 4px 0;
-      color: #cbd5f5;
-      font-size: 1rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #020617;
-      border-radius: 12px;
-      border: 1px solid #1f2937;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .card h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #e5e7eb;
-    }
-    .card p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #9ca3af;
-    }
-    .steps {
-      color: #cbd5f5;
-      margin: 5px 0 0;
-      padding-left: 18px;
-    }
-    .steps li {
-      margin: 4px 0;
-    }
-    .btn-row {
-      margin-top: 12px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid #1d4ed8;
-      background: #1d4ed8;
-      color: #e5e7eb;
-      font-size: 1rem;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.1s ease;
-      width: 100%;
-      text-align: center;
-    }
-    .btn:hover {
-      background: #2563eb;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    }
-    .btn-outline {
-      background: transparent;
-      border-color: #374151;
-    }
-    .btn-outline:hover {
-      background: #111827;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #6b7280;
-      padding: 20px;
-      border-top: 1px solid #1f2937;
-      margin-top: 30px;
-    }
+
     .tag {
-      padding: 4px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(37, 99, 235, 0.15);
-      border: 1px solid rgba(37, 99, 235, 0.5);
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(37, 99, 235, 0.4);
       font-size: 0.8rem;
       color: #bfdbfe;
     }
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0 0 10px;
+    }
+
+    .subinfo {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #cbd5f5;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: white;
+    }
+
+    .card p, li {
+      color: #cbd5f5;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1d4ed8;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 20px;
+      color: #6b7280;
+      border-top: 1px solid #1f2937;
+      margin-top: 30px;
+    }
+
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo-title">
-    <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
-    <div>
-      <h1>PolarisImplants – Espace licences</h1>
-      <p class="subtitle">Activation du guide PolarisImplants & module CNC PolarisVision</p>
-    </div>
-  </div>
+  <h1>PolarisImplants – Espace licences</h1>
   <div class="tag">Compatible machine CNC</div>
 </header>
 
 <main>
-  <section class="hero">
-    <h2>Merci pour votre achat !</h2>
-    <p><b>Vous trouverez ci-dessous :</b></p>
-    <p>– l’accès au générateur de licence PolarisImplants<br>
-       – le module CNC PolarisVision pour le G-code.</p>
-  </section>
 
-  <section class="cards">
+  <h2>Merci pour votre achat !</h2>
 
-    <!-- Générateur licence -->
-    <article class="card">
+  <p class="subinfo">
+    Vous trouverez ci-dessous :<br>
+    – l’accès au <b>générateur de licence PolarisImplants</b><br>
+    – le lien vers <b>PolarisVision – CNC Drilling Module</b>
+  </p>
+
+  <div class="cards">
+
+    <!-- Carte 1 - Générateur de licence -->
+    <div class="card">
       <h3>1. Générer votre licence PolarisImplants</h3>
-      <p>Obtenez votre licence et votre lien de téléchargement.</p>
-
-      <ul class="steps">
-        <li>Cliquez sur le bouton ci-dessous</li>
-        <li>Entrez nom, prénom et e-mail</li>
-        <li>Recevez automatiquement votre licence</li>
+      <p>Cette étape vous permet d’obtenir votre licence et votre lien de téléchargement du guide PolarisImplants.</p>
+      <ul>
+        <li>Cliquer sur le bouton ci-dessous.</li>
+        <li>Saisir vos <b>nom, prénom, adresse e-mail</b>.</li>
+        <li>Recevez automatiquement votre licence par e-mail.</li>
       </ul>
 
-      <div class="btn-row">
-        <a class="btn" href="https://license.leguidechirurgical.com" target="_blank">
-          Accéder au générateur de licences
-        </a>
-      </div>
-    </article>
+      <!--  --><a class="btn" href="https://license.leguidechirurgical.com/" target="_blank">
 
-    <!-- PolarisVision CNC -->
-    <article class="card">
+      <a class="btn" href="https://license.leguidechirurgical.com/" target="_blank">
+        Accéder au générateur de licences
+      </a>
+    </div>
+
+    <!-- Carte 2 - PolarisVision -->
+    <div class="card">
       <h3>2. PolarisVision – CNC Drilling Module</h3>
-      <p>Mesurez vos points, calibrez et générez le G-code.</p>
-
-      <ul class="steps">
+      <p>Mesurez vos points, calibrez la plaque Polaris et générez votre G-code.</p>
+      <ul>
         <li>Charger l’image Polaris</li>
-        <li>Définir les 4 coins du cadre</li>
-        <li>Mesurer et générer PDF / G-code</li>
+        <li>Définir les 4 points du cadre rouge</li>
+        <li>Mesurer vos points et générer le PDF ou G-code</li>
       </ul>
 
-      <div class="btn-row">
-        <a class="btn" href="https://polarisimplants.github.io/polarisvision/" target="_blank">
-          Ouvrir PolarisVision – CNC Drilling Module
-        </a>
-      </div>
-    </article>
+      <a class="btn" href="https://polarisimplants.github.io/polarisvision/" target="_blank">
+        Ouvrir PolarisVision – CNC Drilling Module
+      </a>
+    </div>
 
-    <!-- Assistance -->
-    <article class="card">
+    <!-- Carte 3 - Support -->
+    <div class="card">
       <h3>Besoin d’aide ?</h3>
-      <p>Contactez-nous en cas de problème.</p>
-
+      <p>En cas de difficulté de licence ou d’utilisation, contactez-nous :</p>
       <p><b>Support PolarisImplants</b><br>
-         Email : <a href="mailto:support@polarisimplants.com">support@polarisimplants.com</a></p>
+        <a href="mailto:support@polarisimplants.com">support@polarisimplants.com</a>
+      </p>
 
-      <div class="btn-row">
-        <a class="btn btn-outline" href="mailto:support@polarisimplants.com">
-          Contacter le support
-        </a>
-      </div>
-    </article>
+      <a class="btn" style="background:#374151;" href="mailto:support@polarisimplants.com">
+        Contacter le support
+      </a>
+    </div>
 
-  </section>
+  </div>
 </main>
 
 <footer>
-  © <span id="year"></span> PolarisImplants – Tous droits réservés.
+  © 2025 PolarisImplants – Tous droits réservés.
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
+
