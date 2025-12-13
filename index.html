@@ -246,5 +246,37 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+<form method="POST" action="generate.php">
+  <label>Nom</label>
+  <input type="text" name="nom" required>
+
+  <label>Prénom</label>
+  <input type="text" name="prenom" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <!-- clé secrète (cachée, mais envoyée au serveur) -->
+  <input type="hidden" name="access_key" value="CLE_SECRETE_ADMIN">
+
+  <button type="submit">Générer ma licence</button>
+</form>
+
+<form method="POST" action="generate.php">
+  <label>Nom</label>
+  <input type="text" name="nom" required>
+
+  <label>Prénom</label>
+  <input type="text" name="prenom" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <!-- clé secrète (cachée, mais envoyée au serveur) -->
+  <input type="hidden" name="access_key" value="CLE_SECRETE_ADMIN">
+
+  <button type="submit">Générer ma licence</button>
+</form>
+
 </body>
 </html>
